@@ -1,0 +1,8 @@
+selenium-wire
+webdriver-manager
+ddddocr
+onnxruntime
+docopt
+requests
+selenium 
+blinker
