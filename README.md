@@ -11,6 +11,9 @@ pip install requests
 
 
 **配置获取方法**：
+
+
+
 见`config.py`，需要三个参数`TARGET_URL`(str格式), `HEADERS`(json格式), `PAYLOAD`(json格式)
 ![alt text](img/image-1.png)
 如图，在成绩单页面按F12进入开发者页面，进入“网络”选项卡，选择"Fetch/XHR"过滤条件
@@ -20,7 +23,10 @@ pip install requests
 如图，切换至“载荷”选项卡，复制PAYLOAD
 
 
-**运行**
+### 运行
+
+
+
 完成配置后，在终端运行
 `python main.py`
 推荐的做法是挂到后台:
