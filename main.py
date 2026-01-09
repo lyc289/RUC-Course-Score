@@ -80,9 +80,6 @@ def send_pushplus(content, channel='wechat'):
 def get_current_courses():
     """爬取并解析当前课程列表"""
     try:
-        # 确保Cookie有效
-        if not ensure_cookies_valid():
-            return None, None
 
         response = requests.post(config.TARGET_URL, headers=config.HEADERS, json=config.PAYLOAD, timeout=5)
         response.encoding = 'utf-8'
@@ -182,5 +179,4 @@ def main():
 if __name__ == "__main__":
     while True:
         main()
-        # 每 10 分钟 (600秒) 检查一次，太频繁会被封IP
-        time.sleep(600)
+        time.sleep(1200) # 20分钟检测一次,可自行调整
