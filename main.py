@@ -4,7 +4,13 @@ import os
 import json
 import config
 from ruclogin import get_cookies, check_cookies
+import configparser
 
+token_config = configparser.ConfigParser()
+ROOT = os.path.dirname(os.path.abspath(__file__))
+INI_PATH = os.path.join(ROOT, "config.ini")
+token_config.read(INI_PATH, encoding="utf-8")
+YOUR_TOKEN = token_config["base"]["YOUR_TOKEN"]
 # 本地保存爬取到的课程成绩信息
 DB_FILE = "page.json"
 
@@ -58,7 +64,7 @@ def send_pushplus(content, channel='wechat'):
     url = 'http://www.pushplus.plus/send'
 
     data = {
-        "token": config.YOUR_TOKEN,
+        "token": YOUR_TOKEN,
         "title": "成绩监控通知",  # 标题
         "content": content,              # 内容
         "channel": channel,              # !!! 核心参数: 决定发给微信还是邮件 !!!

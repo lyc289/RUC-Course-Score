@@ -66,6 +66,3 @@ def update_headers(cookies, debug=False):
         print(f"Cookie Header: {HEADERS.get('Cookie', 'NOT SET')}")
         print(f"TOKEN Header: {HEADERS.get('TOKEN', 'NOT SET')}")
         print("================================\n")
-
-# PUSHPLUS 令牌 (在 pushplus.plus 网站获取)
-YOUR_TOKEN="e5a5198ce0a84c17b7846a8fcac36c6e"

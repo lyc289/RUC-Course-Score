@@ -12,7 +12,7 @@ pip install -r requirements.txt
 - password: 微人大密码
 - browser: 推荐Chrome
 - driver: 浏览器地址
-
+- YOUR_TOKEN: 在 https://www.pushplus.plus/ 注册的用户token, 用于在微信/邮件端接受通知(默认推送到微信)
 
 
 ### 运行
